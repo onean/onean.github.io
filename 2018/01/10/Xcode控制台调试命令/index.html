@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Memo</title>
+  <title>Xcode控制台调试命令 | Memo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Memo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="Xcode编译器是LLVM 2.0，控制台调试命令前缀为lldb。 ##1、bt    显示所有的调用栈帧。该命令可用来显示函数的调用顺序。 ##2、po    输出对象 eg. po user ##3、kill    终止正在运行的程序     ##4、list    显示断点所处代码片段 ##5、next    等同于step over，跳转到下一步 ##6、print 输出表达式的值 eg.">
+<meta name="keywords" content="Objective-C,Xcode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Xcode控制台调试命令">
+<meta property="og:url" content="http://yoursite.com/2018/01/10/Xcode控制台调试命令/index.html">
 <meta property="og:site_name" content="Memo">
+<meta property="og:description" content="Xcode编译器是LLVM 2.0，控制台调试命令前缀为lldb。 ##1、bt    显示所有的调用栈帧。该命令可用来显示函数的调用顺序。 ##2、po    输出对象 eg. po user ##3、kill    终止正在运行的程序     ##4、list    显示断点所处代码片段 ##5、next    等同于step over，跳转到下一步 ##6、print 输出表达式的值 eg.">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-10T14:35:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Memo">
+<meta name="twitter:title" content="Xcode控制台调试命令">
+<meta name="twitter:description" content="Xcode编译器是LLVM 2.0，控制台调试命令前缀为lldb。 ##1、bt    显示所有的调用栈帧。该命令可用来显示函数的调用顺序。 ##2、po    输出对象 eg. po user ##3、kill    终止正在运行的程序     ##4、list    显示断点所处代码片段 ##5、next    等同于step over，跳转到下一步 ##6、print 输出表达式的值 eg.">
   
     <link rel="alternative" href="/atom.xml" title="Memo" type="application/atom+xml">
   
@@ -140,85 +145,68 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Xcode控制台调试命令" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/10/NSPredicate/" class="archive-article-date">
-  	<time datetime="2018-01-10T13:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/10/NSPredicate/">NSPredicate</a>
+    <h1 class="article-title" itemprop="name">
+      Xcode控制台调试命令
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Objective-C</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/OC//" class="article-tag-list-link color3">OC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/10/Xcode控制台调试命令/" class="archive-article-date">
+        
+        <a href="/2018/01/10/Xcode控制台调试命令/" class="archive-article-date">
   	<time datetime="2018-01-10T13:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-10</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/10/Xcode控制台调试命令/">Xcode控制台调试命令</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Xcode编译器是LLVM 2.0，控制台调试命令前缀为lldb。</p>
+<p>##1、bt    显示所有的调用栈帧。该命令可用来显示函数的调用顺序。</p>
+<p>##2、po    输出对象 eg. po user</p>
+<p>##3、kill    终止正在运行的程序    </p>
+<p>##4、list    显示断点所处代码片段</p>
+<p>##5、next    等同于step over，跳转到下一步</p>
+<p>##6、print 输出表达式的值 eg. print 3*2</p>
+<p>##7、breakpoint 相关操作<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">clear   -- Delete or disable breakpoints matching the 					specified source file and line.</span><br><span class="line"></span><br><span class="line">command -- Commands for adding, removing and listing LLDB 				commands executed when a breakpoint is hit.</span><br><span class="line"></span><br><span class="line">delete  -- Delete the specified breakpoint(s).  If no 					breakpoints are specified, delete them all.</span><br><span class="line"></span><br><span class="line">disable -- Disable the specified breakpoint(s) without 					deleting them.  Ifnone are specified, disable all 			breakpoints.</span><br><span class="line"></span><br><span class="line">enable  -- Enable the specified disabled breakpoint(s). If no 			breakpoints are specified, enable all of them.</span><br><span class="line"></span><br><span class="line">list    -- List some or all breakpoints at configurable levels 				of detail.</span><br><span class="line"></span><br><span class="line">modify  -- Modify the options on a breakpoint or set of 				breakpoints in the executable.  If no breakpoint 			is specified, acts on the last created breakpoint.  			With the exception of -e, -d and -i,passing an 				empty argument clears the modification.</span><br><span class="line">name    -- Commands to manage name tags for breakpoints</span><br><span class="line"></span><br><span class="line">read    -- Read and set the breakpoints previously saved to a 			file with breakpoint write&quot;.  </span><br><span class="line"></span><br><span class="line">set     -- Sets a breakpoint or set of breakpoints in the 				executable.</span><br><span class="line">	-M &lt;method&gt; ( --method &lt;method&gt; )</span><br><span class="line">   	-S &lt;selector&gt; ( --selector &lt;selector&gt; )</span><br><span class="line">   	-b &lt;function-name&gt; ( --basename &lt;function-name&gt; )</span><br><span class="line">   	-f &lt;filename&gt; ( --file &lt;filename&gt; )</span><br><span class="line">   	-l &lt;linenum&gt; ( --line &lt;linenum&gt; )</span><br><span class="line">   	-n &lt;function-name&gt; ( --name &lt;function-name&gt; )</span><br><span class="line"></span><br><span class="line">write   -- Write the breakpoints listed to a file that can be 			read in with &quot;breakpoint read&quot;.  If given no 					arguments, writes all breakpoints.</span><br></pre></td></tr></table></figure></p>
+<p>##8、watchpoint</p>
+<p>作为断点的补充，可以在不中断程序的情况下监测一些变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">command -- Commands for adding, removing and examining 					LLDB commands executed when the watchpoint 					is hit (watchpoint &apos;commmands&apos;).</span><br><span class="line">delete  -- Delete the specified watchpoint(s).  If no 				watchpoints are specified, delete them all.</span><br><span class="line">disable -- Disable the specified watchpoint(s) without 					removing it/them.  If no watchpoints are 					specified, disable them all.</span><br><span class="line">enable  -- Enable the specified disabled watchpoint(s). 					If no watchpoints are specified, enable all 				of them.</span><br><span class="line">ignore  -- Set ignore count on the specified 							watchpoint(s).  If no watchpoints are 						specified, set them all.</span><br><span class="line">list    -- List all watchpoints at configurable levels 					of detail.</span><br><span class="line">modify  -- Modify the options on a watchpoint or set of 					watchpoints in the executable.  If no 						watchpoint is specified, act on the last 					created watchpoint.  Passing an empty argument 					clears the modification.</span><br><span class="line">set     -- Commands for setting a watchpoint.</span><br></pre></td></tr></table></figure>
+<h2 id="9、thread"><a href="#9、thread" class="headerlink" title="9、thread"></a>9、thread</h2><p>thread list</p>
+<h2 id="10、image"><a href="#10、image" class="headerlink" title="10、image"></a>10、image</h2><ul>
+<li>list  </li>
+<li>image lookup –address 0x0000000100000de0 查看奔溃代码位置</li>
+<li>image lookup –type NSURL 查看具体的类型</li>
+</ul>
+<h2 id="11、命令别名"><a href="#11、命令别名" class="headerlink" title="11、命令别名"></a>11、命令别名</h2><ul>
+<li><p>command alias bfl breakpoint set -f %1 -l %2</p>
+<p>调用时使用 bf1 <filename> <linenum>    </linenum></filename></p>
+</li>
+<li><p>command unalias bf1</p>
+</li>
+</ul>
+<h2 id="12、help"><a href="#12、help" class="headerlink" title="12、help"></a>12、help</h2><ul>
+<li>可以输出LLDB的所有顶层命令</li>
+<li>后面可以跟某个特定命令，输出该命令的所有信息。eg. help breakpoint set</li>
+<li>apropos 可以进行关键字搜索，如apropos file 会以file为关键字查询LLDB文档</li>
+<li>可以查看一个别名的原形 eg.help bf1</li>
+</ul>
+<p>13、</p>
+<p>14、</p>
+<p><a href="http://www.cocoachina.com/ios/20150126/11021.html" target="_blank" rel="noopener">相关文章</a></p>
+<p><a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-command-examples.html#//apple_ref/doc/uid/TP40012917-CH3-SW5" target="_blank" rel="noopener">AppleDocument</a></p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -234,7 +222,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -247,70 +235,113 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/01/10/Xcode控制台调试命令/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/10/MacOS事件监听/" class="archive-article-date">
-  	<time datetime="2018-01-10T13:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-10</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/01/10/NSPredicate/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          NSPredicate
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/01/10/MacOS事件监听/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MacOS事件监听</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/10/MacOS事件监听/">MacOS事件监听</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Objective-C</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MacOS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/OC//" class="article-tag-list-link color3">OC</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -333,8 +364,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
