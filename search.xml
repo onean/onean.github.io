@@ -36,15 +36,13 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[自定义DMG安装包]]></title>
-    <url>%2F2017%2F10%2F10%2F%E8%87%AA%E5%AE%9A%E4%B9%89DMG%E5%AE%89%E8%A3%85%E5%8C%85%2F</url>
-    <content type="text"><![CDATA[1、通过Xcode archive导出.app文件 2、进入文件夹，将plist等不希望展示给用户的文件删除 3、创建Application快捷方式，可在finder中创建快捷方式拖入文件夹，也可在Terminal中进入文件夹，键入 1ln -s /Applications 4、打开磁盘工具，点击左上角菜单，文件-新建-来自文件夹的映像 ​ 选择之前修改过的app文件所在文件夹，映像格式选择读和写 5、生成dmg文件 6、双击打开dmg文件 7、右键文件夹空白处 调整图标大小，设置背景图片。生成如下样式的安装包。 在Terminal中输入defaults write com.apple.finder AppleShowAllFiles -bool true，然后重启finder，可以发现dmg文件夹中会出现隐藏文件。这些隐藏文件包括背景图片，以及其他打包时生成的配置文件。 可以看到，QQ的策略是一直拖到了最下面，目前没有找到更好的办法，先采用这个办法。 8.配置完成后，推出安装包。打开Terminal，进入dmg所在文件夹。 1hdiutil convert -format UDZO -o newName.dmg oldName.dmg]]></content>
-      <categories>
-        <category>OC</category>
-      </categories>
-      <tags>
-        <tag>Objective-C</tag>
-        <tag>Mac</tag>
-      </tags>
+    <title></title>
+    <url>%2F1970%2F01%2F18%2F%E8%87%AA%E5%AE%9A%E4%B9%89DMG%E5%AE%89%E8%A3%85%E5%8C%85111%2F</url>
+    <content type="text"><![CDATA[name: 自定义DMG安装包111 date: 1516717918.0 name: 自定义DMG安装包111 date: 1516717689.0 name: 自定义DMG安装包111 date: 1516717654.0 name: 自定义DMG安装包111 date: 1516551948.0 name: 自定义DMG安装包111 date: 1516551891.0 name: 自定义DMG安装包111 date: 1516551880.0 name: 自定义DMG安装包111 date: 1516551802.0 name: 自定义DMG安装包111 date: 1516551770.0 name: 自定义DMG安装包 date: 1516551518.0 name: 自定义DMG安装包 date: 1516551457.0自定义DMG安装包1、通过Xcode archive导出.app文件 2、进入文件夹，将plist等不希望展示给用户的文件删除 3、创建Application快捷方式，可在finder中创建快捷方式拖入文件夹，也可在Terminal中进入文件夹，键入 1ln -s /Applications 4、打开磁盘工具，点击左上角菜单，文件-新建-来自文件夹的映像 ​ 选择之前修改过的app文件所在文件夹，映像格式选择读和写​​ 5、生成dmg文件​​ 6、双击打开dmg文件​​ 7、右键文件夹空白处​​ ​​ 调整图标大小，设置背景图片。生成如下样式的安装包。​​ ​​ 在Terminal中输入defaults write com.apple.finder AppleShowAllFiles -bool true，然后重启finder，可以发现dmg文件夹中会出现隐藏文件。这些隐藏文件包括背景图片，以及其他打包时生成的配置文件。​​ 可以看到，QQ的策略是一直拖到了最下面，目前没有找到更好的办法，先采用这个办法。​​​​ 8.配置完成后，推出安装包。打开Terminal，进入dmg所在文件夹。​​ 12​ hdiutil convert -format UDZO -o newName.dmg oldName.dmg​ ​]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F1970%2F01%2F18%2F%E8%87%AA%E5%AE%9A%E4%B9%89DMG%E5%AE%89%E8%A3%85%E5%8C%85%2F</url>
+    <content type="text"><![CDATA[自定义DMG安装包1、通过Xcode archive导出.app文件 2、进入文件夹，将plist等不希望展示给用户的文件删除 3、创建Application快捷方式，可在finder中创建快捷方式拖入文件夹，也可在Terminal中进入文件夹，键入 1ln -s /Applications 4、打开磁盘工具，点击左上角菜单，文件-新建-来自文件夹的映像 ​ 选择之前修改过的app文件所在文件夹，映像格式选择读和写​​ 5、生成dmg文件​​ 6、双击打开dmg文件​​ 7、右键文件夹空白处​​ ​​ 调整图标大小，设置背景图片。生成如下样式的安装包。​​ ​​ 在Terminal中输入defaults write com.apple.finder AppleShowAllFiles -bool true，然后重启finder，可以发现dmg文件夹中会出现隐藏文件。这些隐藏文件包括背景图片，以及其他打包时生成的配置文件。​​ 可以看到，QQ的策略是一直拖到了最下面，目前没有找到更好的办法，先采用这个办法。​​​​ 8.配置完成后，推出安装包。打开Terminal，进入dmg所在文件夹。​​ 12​ hdiutil convert -format UDZO -o newName.dmg oldName.dmg​ ​]]></content>
   </entry>
 </search>
