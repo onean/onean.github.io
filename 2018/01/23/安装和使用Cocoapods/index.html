@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Memo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="####安装和使用Cocoapods  升级Ruby环境 终端输入： 1$sudo gem update --system">
+  <meta name="description" content="升级Ruby环境 终端输入： 1$sudo gem update --system">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Memo">
 <meta property="og:url" content="http://yoursite.com/2018/01/23/安装和使用Cocoapods/index.html">
 <meta property="og:site_name" content="Memo">
-<meta property="og:description" content="####安装和使用Cocoapods  升级Ruby环境 终端输入： 1$sudo gem update --system">
+<meta property="og:description" content="升级Ruby环境 终端输入： 1$sudo gem update --system">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-23T15:20:42.000Z">
+<meta property="og:updated_time" content="2018-01-23T15:23:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Memo">
-<meta name="twitter:description" content="####安装和使用Cocoapods  升级Ruby环境 终端输入： 1$sudo gem update --system">
+<meta name="twitter:description" content="升级Ruby环境 终端输入： 1$sudo gem update --system">
   
     <link rel="alternative" href="/atom.xml" title="Memo" type="application/atom+xml">
   
@@ -149,15 +149,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>####安装和使用Cocoapods</p>
-<ul>
+        <ul>
 <li><p>升级Ruby环境</p>
 <p>终端输入：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sudo gem update --system</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<a id="more"></a>
-<ul>
+<a id="more"></a></li>
 <li><p>安装CocoaPods要访问cocoapods.org,该网站已经被天朝墙壁，需要更换镜像来安装</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1、gem sources --remove https://rubygems.org/</span><br><span class="line">2、gem sources -a https://gems.ruby-china.org/</span><br><span class="line">3、gem sources -l</span><br></pre></td></tr></table></figure>
 </li>
@@ -166,8 +162,7 @@
 <p>​</p>
 </li>
 </ul>
-<p>####常见问题（不定期更新）</p>
-<p><strong>pod install 或者pod update 速度慢的问题</strong></p>
+<h1 id="常见问题（不定期更新）"><a href="#常见问题（不定期更新）" class="headerlink" title="常见问题（不定期更新）"></a>常见问题（不定期更新）</h1><p><strong>pod install 或者pod update 速度慢的问题</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">如果ruby源已更换为淘宝镜像，则原因可能是：当执行以上两个命令时会升级Cocoapods的Specs仓库，加一个参数就可以省略这一步，然后速度可能会提升。参数命令如下：</span><br><span class="line">pod install --verbose --no-repo-update</span><br><span class="line">pod update --verbose --no-repo-update </span><br><span class="line">执行完命令以后有时还是会报错，不妨更新一下本地repo</span><br><span class="line">pod repo update</span><br></pre></td></tr></table></figure>
 <p><strong>“podfile.lock” not such file or directory……</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">方法一：</span><br><span class="line">    rm -rf MyProject.xcworkspace</span><br><span class="line">    pod install</span><br><span class="line">方法二：</span><br><span class="line">	关闭Xcode，重新执行pod install，之后运行Xcode</span><br><span class="line">方法三：</span><br><span class="line">	删除以下文件</span><br><span class="line">      xcworkspace</span><br><span class="line">      Podfile.lock</span><br><span class="line">      Pods文件夹</span><br><span class="line">      ~/Library/Developer/Xcode/DerivedData路径下对应工程的文件夹</span><br><span class="line">    执行pod install，之后运行Xcode</span><br></pre></td></tr></table></figure>
@@ -200,10 +195,6 @@
 <p><strong>fatal: The remote end hung up unexpectedly</strong></p>
 <p><strong>error: RPC failed; curl 18 transfer closed with outstanding read data remaining</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.postBuffer 524288000</span><br><span class="line"></span><br><span class="line">需要注意的是http.postBuffer 后，单位是b，524288000B也就500M左右</span><br></pre></td></tr></table></figure>
-<p>??</p>
-<p>$ sudo gem install -n /usr/local/bin cocoapods</p>
-<p>$ Git clone <a href="https://git.coding.net/CocoaPods/Specs.git" target="_blank" rel="noopener">https://git.coding.net/CocoaPods/Specs.git</a> ~/.cocoapods/repos/master</p>
-<p>sudo gem install -n /usr/local/bin cocoapods</p>
 
       
 
@@ -286,8 +277,8 @@
     </a>
   
   
-    <a href="/2018/01/10/NSPredicate/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">NSPredicate</div>
+    <a href="/2018/01/10/Xcode控制台调试命令/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Xcode控制台调试命令</div>
       <i class="icon-circle-right"></i>
     </a>
   
