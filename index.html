@@ -147,11 +147,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Rebase-vs-Merge"><a href="#Rebase-vs-Merge" class="headerlink" title="Rebase vs. Merge"></a><a href="https://link.zhihu.com/?target=https%3A//git-scm.com/book/en/v2/Git-Branching-Rebasing%23Rebase-vs.-Merge" target="_blank" rel="noopener">Rebase vs. Merge</a></h3><h3 id="Now-that-you’ve-seen-rebasing-and-merging-in-action-you-may-be-wondering-which-one-is-better-Before-we-can-answer-this-let’s-step-back-a-bit-and-talk-about-what-history-means"><a href="#Now-that-you’ve-seen-rebasing-and-merging-in-action-you-may-be-wondering-which-one-is-better-Before-we-can-answer-this-let’s-step-back-a-bit-and-talk-about-what-history-means" class="headerlink" title="Now that you’ve seen rebasing and merging in action, you may be wondering which one is better. Before we can answer this, let’s step back a bit and talk about what history means."></a>Now that you’ve seen rebasing and merging in action, you may be wondering which one is better. Before we can answer this, let’s step back a bit and talk about what history means.</h3><p>One point of view on this is that your repository’s commit history is a <strong>record of what actually happened.</strong>It’s a historical document, valuable in its own right, and shouldn’t be tampered with. From this angle, changing the commit history is almost blasphemous; you’re <em>lying</em> about what actually transpired. So what if there was a messy series of merge commits? That’s how it happened, and the repository should preserve that for posterity.</p>
-<p>The opposing point of view is that the commit history is the <strong>story of how your project was made.</strong> You wouldn’t publish the first draft of a book, and the manual for how to maintain your software deserves careful editing. This is the camp that uses tools like rebase and filter-branch to tell the story in the way that’s best for future readers.</p>
-<p>Now, to the question of whether merging or rebasing is better: hopefully you’ll see that it’s not that simple. Git is a powerful tool, and allows you to do many things to and with your history, but every team and every project is different. Now that you know how both of these things work, it’s up to you to decide which one is best for your particular situation.</p>
-<p>In general the way to get the best of both worlds is to rebase local changes you’ve made but haven’t shared yet before you push them in order to clean up your story, but never rebase anything you’ve pushed somewhere.</p>
-
+        <h3 id="Rebase-vs-Merge"><a href="#Rebase-vs-Merge" class="headerlink" title="Rebase vs. Merge"></a><a href="https://link.zhihu.com/?target=https%3A//git-scm.com/book/en/v2/Git-Branching-Rebasing%23Rebase-vs.-Merge" target="_blank" rel="noopener">Rebase vs. Merge</a></h3><h3 id="Now-that-you’ve-seen-rebasing-and-merging-in-action-you-may-be-wondering-which-one-is-better-Before-we-can-answer-this-let’s-step-back-a-bit-and-talk-about-what-history-means"><a href="#Now-that-you’ve-seen-rebasing-and-merging-in-action-you-may-be-wondering-which-one-is-better-Before-we-can-answer-this-let’s-step-back-a-bit-and-talk-about-what-history-means" class="headerlink" title="Now that you’ve seen rebasing and merging in action, you may be wondering which one is better. Before we can answer this, let’s step back a bit and talk about what history means."></a>Now that you’ve seen rebasing and merging in action, you may be wondering which one is better. Before we can answer this, let’s step back a bit and talk about what history means.</h3>
+        
+          <a class="article-more-a" href="/2018/01/23/RebaseVS.Merge/#more">more >></a>
+        
       
 
       
@@ -204,53 +203,10 @@
 <p>终端输入：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sudo gem update --system</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>安装CocoaPods要访问cocoapods.org,该网站已经被天朝墙壁，需要更换镜像来安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1、gem sources --remove https://rubygems.org/</span><br><span class="line">2、gem sources -a https://gems.ruby-china.org/</span><br><span class="line">3、gem sources -l</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装Cocoapods</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem install cocoapods</span><br></pre></td></tr></table></figure>
-<p>​</p>
-</li>
 </ul>
-<p>####常见问题（不定期更新）</p>
-<p><strong>pod install 或者pod update 速度慢的问题</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">如果ruby源已更换为淘宝镜像，则原因可能是：当执行以上两个命令时会升级Cocoapods的Specs仓库，加一个参数就可以省略这一步，然后速度可能会提升。参数命令如下：</span><br><span class="line">pod install --verbose --no-repo-update</span><br><span class="line">pod update --verbose --no-repo-update </span><br><span class="line">执行完命令以后有时还是会报错，不妨更新一下本地repo</span><br><span class="line">pod repo update</span><br></pre></td></tr></table></figure>
-<p><strong>“podfile.lock” not such file or directory……</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">方法一：</span><br><span class="line">    rm -rf MyProject.xcworkspace</span><br><span class="line">    pod install</span><br><span class="line">方法二：</span><br><span class="line">	关闭Xcode，重新执行pod install，之后运行Xcode</span><br><span class="line">方法三：</span><br><span class="line">	删除以下文件</span><br><span class="line">      xcworkspace</span><br><span class="line">      Podfile.lock</span><br><span class="line">      Pods文件夹</span><br><span class="line">      ~/Library/Developer/Xcode/DerivedData路径下对应工程的文件夹</span><br><span class="line">    执行pod install，之后运行Xcode</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p> 如果以上三种方法不能解决问题，继续看</p>
-</blockquote>
-<pre><code>方法四：
-1、设置Configurations
-2、选中Project-&gt;选择Info tab-&gt;看看Configurations是不是被设置为        None了，如果是None的话请改为Pods
-3、修改Pods脚本文件路径
-4、右键工程根目录下的xxx.xcodeproj文件，显示包内容
-5、双击打开project.pbxproj文件
-6、查找&quot;Pods-resources.sh&quot;, 找到shellScript，把路径修改为对应的值        中的路径
-</code></pre><p><strong>解决Unable to add a source with url <a href="https://github.com/CocoaPods/Specs.git" target="_blank" rel="noopener">https://github.com/CocoaPods/Specs.git</a> named</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1、pod repo add master https://github.com/CocoaPods/Specs.git</span><br><span class="line">2、根据提示执行 pod setup</span><br><span class="line">3、如果出现 [!] The `master` repo is not a git repo.</span><br><span class="line">	进入/users/你的用户名/.cocoapods/repos，删除master文件夹 </span><br><span class="line">	然后执行pod setup</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>如果是安装多个Xcdoe，还需要选择Xcode的路径</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo xcode-select -switch /Applications/Xcode.app/</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>在终端里输入下方命令可以知道Xcode的路径：</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-select -p</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>如果还出现问题</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo gem install -n /usr/local/bin cocoapods</span><br><span class="line">之后</span><br><span class="line">pod setup</span><br></pre></td></tr></table></figure>
-<p><em>网上有人说需要执行这行代码</em></p>
-<p><em>Git clone <a href="https://git.coding.net/CocoaPods/Specs.git" target="_blank" rel="noopener">https://git.coding.net/CocoaPods/Specs.git</a> ~/.cocoapods/repos/master</em></p>
-<p><strong>fatal: The remote end hung up unexpectedly</strong></p>
-<p><strong>error: RPC failed; curl 18 transfer closed with outstanding read data remaining</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.postBuffer 524288000</span><br><span class="line"></span><br><span class="line">需要注意的是http.postBuffer 后，单位是b，524288000B也就500M左右</span><br></pre></td></tr></table></figure>
-<p>??</p>
-<p>$ sudo gem install -n /usr/local/bin cocoapods</p>
-<p>$ Git clone <a href="https://git.coding.net/CocoaPods/Specs.git" target="_blank" rel="noopener">https://git.coding.net/CocoaPods/Specs.git</a> ~/.cocoapods/repos/master</p>
-<p>sudo gem install -n /usr/local/bin cocoapods</p>
-
+        
+          <a class="article-more-a" href="/2018/01/23/安装和使用Cocoapods/#more">more >></a>
+        
       
 
       
@@ -382,97 +338,6 @@
 
 
   
-    <article id="post-MacOS事件监听" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/10/MacOS事件监听/">MacOS事件监听</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/10/MacOS事件监听/" class="archive-article-date">
-  	<time datetime="2018-01-10T13:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>MacOS开发过程中需要设置快捷键完成对某些点击事件的监听，在Events.h中有所有按键对应的枚举值<br>
-        
-          <a class="article-more-a" href="/2018/01/10/MacOS事件监听/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Objective-C</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MacOS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/OC//" class="article-tag-list-link color3">OC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/10/MacOS事件监听/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-Xcode控制台调试命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -542,6 +407,97 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/01/10/Xcode控制台调试命令/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-MacOS事件监听" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/10/MacOS事件监听/">MacOS事件监听</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/10/MacOS事件监听/" class="archive-article-date">
+  	<time datetime="2018-01-10T13:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>MacOS开发过程中需要设置快捷键完成对某些点击事件的监听，在Events.h中有所有按键对应的枚举值<br>
+        
+          <a class="article-more-a" href="/2018/01/10/MacOS事件监听/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Objective-C</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MacOS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/OC//" class="article-tag-list-link color3">OC</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/10/MacOS事件监听/">展开全文 >></a>
         </p>
       
 
@@ -718,11 +674,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MacOS</a>
+                <a href="javascript:void(0)" class="js-tag color1">Xcode</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Xcode</a>
+                <a href="javascript:void(0)" class="js-tag color1">MacOS</a>
               </li>
             
             <div class="clearfix"></div>
